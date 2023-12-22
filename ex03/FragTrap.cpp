@@ -6,13 +6,13 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:49:11 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/19 20:48:21 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:26:14 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void) : ClapTrap()
+FragTrap::FragTrap(void) : ClapTrap(), _hitPoints(100), _energyPoints(100), _attackDamage(30)
 {
 	setHp(100);
 	setEp(100);
@@ -24,7 +24,7 @@ FragTrap::FragTrap(void) : ClapTrap()
 	std::cout << "FragTrap (Default) 👾 : " << this->getName() << " assembled!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : ClapTrap(name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name), _hitPoints(100), _energyPoints(100), _attackDamage(30)
 {
 	setHp(100);
 	setEp(100);

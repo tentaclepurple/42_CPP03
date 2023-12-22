@@ -6,7 +6,7 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 10:51:22 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/19 12:22:34 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:46:33 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,16 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+		ScavTrap(void);
 		ScavTrap(std::string name);
 		~ScavTrap(void);
+
+		ScavTrap(const ScavTrap &copy);
+
+		ScavTrap & operator =(ScavTrap const &inst2);
+		
 		void	guardGate(void);
 		void	attack(const std::string &target);
 };
-
 
 #endif

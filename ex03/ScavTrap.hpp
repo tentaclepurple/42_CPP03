@@ -6,7 +6,7 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 10:51:22 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/19 20:46:20 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:00:05 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 # include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : public virtual ClapTrap
 {
+	protected:
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
+	
 	public:
 		ScavTrap(void);
 		ScavTrap(std::string name);

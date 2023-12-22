@@ -6,7 +6,7 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:49:15 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/19 14:02:20 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/20 08:33:18 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,16 @@
 class FragTrap : public ClapTrap
 {
 	public:
+		FragTrap(void);
 		FragTrap(std::string name);
 		~FragTrap(void);
+		
+		FragTrap(const FragTrap &copy);
+
+		FragTrap & operator =(FragTrap const &inst2);		
+		
 		void	highFivesGuys(void);
-		//void	attack(const std::string &target);
+
 };
 
 #endif

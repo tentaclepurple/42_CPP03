@@ -6,11 +6,13 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:21:06 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/19 13:48:14 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/19 17:40:50 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+
 
 ClapTrap::ClapTrap(void): _name("Unknown"), _hitPoints(100), _energyPoints(50), _attackDamage(20)
 {
@@ -22,15 +24,15 @@ ClapTrap::ClapTrap(std::string name): _name(name), _hitPoints(100), _energyPoint
 	std::cout << "A ClapTrap has been created 🤖 Codename: " << this->_name << std::endl;
 }
 
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+	std::cout << "ClapTrap ⚙️ Copy constructor called" << std::endl;
+	*this = copy;
+}
+
 ClapTrap::~ClapTrap(void)
 {
 	std::cout << this->_name << " shutdown 💀" << std::endl;
-}
-
-ClapTrap::ClapTrap(const ClapTrap &copy)
-{
-	std::cout << "⚙️ Copy constructor called" << std::endl;
-	*this = copy;
 }
 
 ClapTrap & ClapTrap::operator =(ClapTrap const &inst2)

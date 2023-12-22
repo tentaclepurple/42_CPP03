@@ -6,25 +6,27 @@
 /*   By: imontero <imontero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 09:09:00 by imontero          #+#    #+#             */
-/*   Updated: 2023/12/20 08:23:50 by imontero         ###   ########.fr       */
+/*   Updated: 2023/12/19 20:31:21 by imontero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main()
 {
 	//ClapTrap	josebas("Josebas");
 	//ClapTrap	kalletano("Kalletano");
 	//ClapTrap	txutxi;
-	ScavTrap	manolito("Manu");
-	FragTrap	gustavito("Gustavito");
+	//ScavTrap	manolito("Manu");
+	//FragTrap	gustavito("Gustavito");
 
-	gustavito.highFivesGuys();
-	gustavito.attack("Andresin");
+	DiamondTrap	diamantito("Diamantito");
+
+	diamantito.whoAmI();
+	
+	/*gustavito.highFivesGuys();
 	manolito.attack("Kalletano");
-	/*kalletano.takeDamage(20);
+	kalletano.takeDamage(20);
 	josebas.attack("Kalletano");
 	kalletano.takeDamage(20);
 	josebas.attack("Kalletano");
@@ -52,7 +54,7 @@ int main()
 	josebas.attack("Kalletano");
 	kalletano.takeDamage(20);
 	josebas.attack("Kalletano");
-	kalletano.takeDamage(20);
-*/
+	kalletano.takeDamage(20);*/
+
 	return (0);
 }
